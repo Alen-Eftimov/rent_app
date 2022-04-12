@@ -82,7 +82,14 @@ const GuestsScreen = (props) => {
             </View>  
 
             <Pressable
-                onPress={() => navigation.navigate()}
+                onPress={() =>
+                    navigation.navigate('Home', {
+                        screen:'Explore',
+                        params: {
+                            screen: 'SearchResults',
+                        },
+                    })
+                }
                 style={{
                 marginBottom: 20,
                 backgroundColor: '#f15454',
@@ -92,7 +99,9 @@ const GuestsScreen = (props) => {
                 marginHorizontal: 20,
                 borderRadius: 10,
             }}>
-                <Text style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}>Search</Text>
+                <Text style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}>
+                    Search
+                </Text>
             </Pressable>              
 
         </View>
