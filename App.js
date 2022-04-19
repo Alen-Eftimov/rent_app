@@ -5,12 +5,14 @@
  * @format
  * @flow strict-local
  */
- import { LogBox } from 'react-native';
-import 'react-native-gesture-handler';
+
+// import 'react-native-gesture-handler';
+import 'react-native-pager-view';
 import React from 'react';
 import {
   SafeAreaView,
   StatusBar,
+  LogBox,
 } from 'react-native';
 
 // import HomeScreen from './src/screens/Home';
@@ -42,7 +44,8 @@ const App: () => React$Node = () => {
 };
 
 LogBox.ignoreLogs([
-  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
+  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!", 
+  "[Remote debugger]",
 ]);
 
 export default App;
